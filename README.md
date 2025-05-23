@@ -35,7 +35,7 @@ pip install openai-whisper torch srt deep-translator
 
 默认转文本将使用CPU进行，如果你的电脑使用英伟达系列显卡，则可以通过显卡处理以加速转文字过程
 
-### 📄 [点击查看 GPU 安装网页（适用于 NVIDIA 显卡用户）](https://csfs64.github.io/CSFS_subtitle-tool/gpu_setup_guide.html)
+### 📄 [点击查看 GPU 安装网页（适用于 NVIDIA 显卡用户）](https://csfs64.github.io/CSFS_subtitle-tool/)
 
 点击上方连接并按照提示操作即可
 
