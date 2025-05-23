@@ -1,0 +1,4 @@
+openai-whisper
+torch
+srt
+deep-translator
