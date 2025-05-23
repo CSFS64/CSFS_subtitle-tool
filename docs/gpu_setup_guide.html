@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>GPU 安装指南启动器</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 16px;
+    }
+    h1, h2, h3 { color: #2c3e50; }
+    code { background: #eef; padding: 2px 4px; border-radius: 4px; }
+    pre { background: #eef; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 16px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    a.button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Windows 系统下启用 NVIDIA GPU 加速完整指南</h1>
+
+    <h2>步骤 1：安装显卡驱动（可选，如果你的驱动太老建议更新）</h2>
+    <ol>
+      <li>访问 <a href="https://www.nvidia.com/Download/index.aspx" target="_blank">NVIDIA 官方驱动下载</a></li>
+      <li>选择你的显卡型号并下载安装</li>
+      <li><strong>安装完成后重启电脑</strong></li>
+    </ol>
+
+    <h2>步骤 2：安装 CUDA Toolkit 11.8</h2>
+    <ol>
+      <li>访问 <a href="https://developer.nvidia.com/cuda-11-8-0-download-archive" target="_blank">CUDA Toolkit 11.8 下载页面</a></li>
+      <li>选择：<code>Windows > x86_64 > exe (local)</code></li>
+      <li>下载安装，保持默认设置即可</li>
+    </ol>
+
+    <h2>步骤 3：安装 Python（如果没有）</h2>
+    <ol>
+      <li>访问 <a href="https://www.python.org/downloads/release/python-3100/" target="_blank">Python 3.10 官方下载</a></li>
+      <li>安装时<strong>勾选 Add Python to PATH（务必确认）</strong></li>
+    </ol>
+
+    <h2>步骤 4：安装 GPU 加速版 PyTorch</h2>
+    <p>打开 PowerShell 或 CMD，运行以下命令：</p>
+    <pre>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118</pre>
+
+    <h2>步骤 5：验证安装</h2>
+    <p>在PowerShell，输入“py -版本号”（如果是3.10，则py -3.10）打开Python，随后输入下列代码</p>
+    <pre>
+import torch
+print(torch.cuda.is_available())
+print(torch.cuda.get_device_name(0))
+    </pre>
+    <p>如果一切正常，会输出 True 和你的显卡名称。</p>
+
+    <a class="button" href="https://developer.nvidia.com/cuda-11-8-0-download-archive" target="_blank">立即下载 CUDA Toolkit 11.8</a>
+  </div>
+</body>
+</html>
