@@ -23,5 +23,22 @@
 
 ### ✅ 一键安装全部依赖（推荐）
 
+点击win+R，打开cmd，输入下方代码，将自动完成所需全部依赖的安装
+
 ```bash
 pip install openai-whisper torch srt deep-translator
+```
+
+---
+
+## ⚡ 启用显卡以加速处理进程
+
+默认转文本将使用CPU进行，如果你的电脑使用英伟达系列显卡，则可以通过显卡处理以加速转文字过程
+
+### 📄 [点我查看 GPU 安装指南](./gpu_setup_guide.html)
+
+点击上方连接并按照提示操作即可，你也可以在Github仓库找到gpu_setup_guide.html文档并手动打开
+
+
+
+
