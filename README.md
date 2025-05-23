@@ -1,4 +1,4 @@
-# 🎧 Whisper 字幕助手 GUI（支持中文/英文/乌克兰语）
+# 🔱 Whisper 字幕助手 GUI（支持中文/英文/乌克兰语）
 
 基于 OpenAI Whisper 的图形界面字幕识别工具，支持将 MP3/WAV 音频文件识别为字幕（SRT），并支持输出为乌克兰语、英文或中文字幕
 
@@ -47,7 +47,7 @@ Whisper 依赖 `ffmpeg` 来加载音频文件，如果你未安装或配置错�
    https://www.gyan.dev/ffmpeg/builds/
 2. 滚动到 "Release builds"
 3. 建议下载名字如下的版本：  
-   `ffmpeg-release-essentials.zip`（Static 版本）
+   `ffmpeg-release-essentials.zip`（约88Mb）
 
 ---
 
@@ -69,7 +69,7 @@ C:\ffmpeg
 
 1. 复制路径：
    `C:\ffmpeg\bin`
-2. 按 Win + S，搜索：**编辑系统环境变量** → 打开
+2. 按 Win + R，搜索：**SystemPropertiesAdvanced** → 打开
 3. 点击【环境变量】按钮
 4. 在“系统变量”下找到 `Path`，点击【编辑】
 5. 点击【新建】，粘贴刚才的路径
